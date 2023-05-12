@@ -6,12 +6,12 @@ from keras.optimizers import RMSprop
 from keras.preprocessing.image import ImageDataGenerator
 import keras.utils as image
 
-dataset_dir = "/Users/zenkiu/dev/ml/datasets/humans-or-horses/"
-training_dir = dataset_dir + "training"
+dataset_dir = "/Users/zenkiu/dev/ml/datasets/dogcat/"
+training_dir = dataset_dir + "train"
 validation_dir = dataset_dir + "validation"
-test_image = dataset_dir + "predict/horse_or_human_2.png"
-test_image2 = dataset_dir + "predict/horse_or_human_2.png"
-test_image3 = dataset_dir + "predict/horse_or_human_3.png"
+test_image = dataset_dir + "test1/test1/1.jpg"
+test_image2 = dataset_dir + "test1/test1/2.jpg"
+test_image3 = dataset_dir + "test1/test1/3.jpg"
 
 ### All images will be rescaled by 1./255
 train_datagen = ImageDataGenerator(rescale=1. / 255,
@@ -37,7 +37,7 @@ validation_generator = validation_generator.flow_from_directory(
 )
 
 
-def humans_or_horses():
+def dog_or_cat():
     """
 
     :return:
@@ -88,4 +88,4 @@ def humans_or_horses():
     return None
 
 
-humans_or_horses()
+dog_or_cat()
