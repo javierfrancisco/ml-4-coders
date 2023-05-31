@@ -13,7 +13,7 @@ sentences = [
     'Is it sunny today?'
 ]
 
-# A Tokeniker object that can tokenize 100 words
+# A Tokenizer object that can tokenize 100 words
 # this will be the maximum number of tokens to generate from the corpus of words
 tokenizer = Tokenizer(num_words=100)
 
@@ -43,7 +43,7 @@ print(test_sequences)
 ## and it can be set in the tokenizer
 print('out-of-vocabulary example:')
 tokenizer = Tokenizer(num_words=100, oov_token="<OOV>")
-tokenizer.fit_on_texts(sentences) 5455 345
+tokenizer.fit_on_texts(sentences)
 
 test_sequences = tokenizer.texts_to_sequences(test_data)
 word_index = tokenizer.word_index
